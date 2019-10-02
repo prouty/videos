@@ -13,7 +13,7 @@ const VideoDetail = ({ video }) => {
         <iframe title={video.snippet.title} src={videoSrc} />
       </div>
       <div className="ui segment">
-        <h4 className="ui header">{video.snippet.title}</h4>
+        <h4 className="ui header" dangerouslySetInnerHTML={{__html: video.snippet.title}} />
         <p>
           {video.snippet.description}
         </p>
